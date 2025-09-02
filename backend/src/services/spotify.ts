@@ -39,18 +39,22 @@ export async function syncPodcasts(): Promise<{ added: number; updated: number }
     // Replace with your actual Spotify show ID
     const SHOW_ID = '6qJCwooq9fjtRvvJf7xVCs';
     
-    const response = await axios.get(
-      `https://api.spotify.com/v1/shows/${SHOW_ID}/episodes`,
-      {
-        headers: {
-          'Authorization': `Bearer ${token}`,
-        },
-        params: {
-          limit: 50,
-          market: 'US',
-        },
-      }
-    );
+   // backend/src/services/spotify.ts
+
+// ...
+const response = await axios.post(
+  'https://accounts.spotify.com/api/token',
+  new URLSearchParams({
+    grant_type: 'client_credentials',
+  }), // <= REMOVE THIS COMMA
+  {
+    headers: {
+      'Authorization': `Basic ${Buffer.from(`${config.spotify.clientId}:${config.spotify.clientSecret}`).toString('base64')}`,
+      'Content-Type': 'application/x-www-form-urlencoded',
+    },
+  }
+);
+// ...
     
     let added = 0;
     let updated = 0;
