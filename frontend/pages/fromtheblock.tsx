@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
-import { PlayIcon, SpotifyIcon, YoutubeIcon } from '../components/Icons';
+import { PlayIcon, SpotifyIcon, YouTubeIcon } from '../components/Icons';
 import Layout from '../components/Layout';
 import { fetchPodcasts } from '../lib/api';
 
