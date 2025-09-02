@@ -5,7 +5,7 @@ import Podcast from '../models/Podcast';
 export async function syncYouTubeVideos(): Promise<{ added: number; updated: number }> {
   try {
     // Replace with your actual YouTube channel ID
-    const CHANNEL_ID = 'https://www.youtube.com/@TheJoziExperience';
+    const CHANNEL_ID = 'UCyejLaZWu0DPSsch4pbsfsg';
     
     const response = await axios.get(
       'https://www.googleapis.com/youtube/v3/search',
