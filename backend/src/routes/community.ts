@@ -1,4 +1,4 @@
-mport { Router } from 'express';
+import { Router } from 'express';
 import { z } from 'zod';
 import { authenticate, authenticateAdmin } from '../middlewares/auth';
 import { validateRequest } from '../middlewares/validation';
