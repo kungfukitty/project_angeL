@@ -1,4 +1,5 @@
-mport { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
+// ... rest of the file
 import Head from 'next/head';
 import Image from 'next/image';
 import { motion } from 'framer-motion';
