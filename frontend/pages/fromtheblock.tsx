@@ -89,7 +89,7 @@ export default function FromTheBlock() {
                   filter === 'youtube' ? 'bg-red-600 text-white' : 'glass-effect'
                 }`}
               >
-                <YoutubeIcon className="w-5 h-5 inline mr-2" />
+                <YouTubeIcon className="w-5 h-5 inline mr-2" />
                 YouTube
               </button>
             </div>
