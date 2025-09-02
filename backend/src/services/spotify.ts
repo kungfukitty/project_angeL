@@ -10,11 +10,14 @@ async function getSpotifyToken(): Promise<string> {
     return accessToken;
   }
   
+  // ...
   const response = await axios.post(
     'https://accounts.spotify.com/api/token',
-    new URLSearchParams({
-      grant_type: 'client_credentials',
-    }),
+// ...
+// ...
+    const response = await axios.get(
+      `https://api.spotify.com/v1/shows/${SHOW_ID}/episodes`,
+// ...
     {
       headers: {
         'Authorization': `Basic ${Buffer.from(`${config.spotify.clientId}:${config.spotify.clientSecret}`).toString('base64')}`,
