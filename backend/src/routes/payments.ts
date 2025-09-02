@@ -1,4 +1,5 @@
-import { Router } from 'express';
+import express from 'express';
+// ... rest of the file
 import { z } from 'zod';
 import Stripe from 'stripe';
 import User from '../models/User';
